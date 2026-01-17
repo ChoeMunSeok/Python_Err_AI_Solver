@@ -25,8 +25,10 @@ def parse_gen_ex(solution):
 
 def main():
 
-    test_case = "python3 -m pip install Pillow==9.0.0"
-    cmd = test_case.split()
+    # test_case = "python3 -m pip install Pillow==9.0.0"
+    # cmd = test_case.split()
+
+    cmd = [sys.argv[i] for i in range(1, len(sys.argv))]
 
     load_dotenv()
     API_KEY = os.environ['GEMINI_API_KEY']
